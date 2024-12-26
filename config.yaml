@@ -1,0 +1,42 @@
+# MT5 Monitor Configuration File
+database:
+  dbname: mt5_monitor
+  user: your_username
+  password: your_password
+  host: localhost
+  port: 5432
+
+zmq:
+  port: 5555
+  host: localhost
+
+accounts:
+  - login: "12345"
+    password: "your_password"
+    server: "RoboForex-ECN"
+    alias: "Main Account"
+
+  - login: "67890"
+    password: "your_password"
+    server: "RoboForex-ECN"
+    alias: "Secondary Account"
+
+update_interval: 1.0 # seconds
+
+logging:
+  level: INFO
+  file: mt5_monitor.log
+  max_size: 10485760 # 10MB
+  backup_count: 5
+
+features:
+  enable_trade_copying: true
+  enable_risk_analysis: true
+  enable_alerts: true
+  save_historical_data: true
+
+alert_thresholds:
+  margin_call: 120 # percentage
+  stop_out: 80 # percentage
+  daily_loss: -1000 # dollars
+  daily_profit: 1000 # dollars
