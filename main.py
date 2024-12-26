@@ -210,7 +210,7 @@ class FilterDialog(ModalWindow):
 class MT5AdminDashboard(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("MT5 Admin Dashboard")
+        self.title("MT5 Admin System")
         self.state('zoomed')
         
         # Initialize variables
